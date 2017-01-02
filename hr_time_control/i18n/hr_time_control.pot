@@ -1,0 +1,357 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_time_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-18 08:55+0000\n"
+"PO-Revision-Date: 2016-11-18 08:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_time_control
+#: field:hr.employee,attendance_count:0
+msgid "# of Attendances"
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.actions.act_window,help:hr_time_control.hr_time_control_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click create to add a new attendance.\n"
+"                </p>\n"
+"            "
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.actions.act_window,help:hr_time_control.hr_time_logs_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click create to add a new log.\n"
+"                </p>\n"
+"            "
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.actions.act_window,help:hr_time_control.hr_time_action_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click create to define a new action.\n"
+"                </p>\n"
+"            "
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.logs,log_action:0
+msgid "Action"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,action_external_id:0
+msgid "Action external id"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,action_type:0
+msgid "Action type"
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.ui.menu,name:hr_time_control.hr_time_action_config_menu
+msgid "Actions"
+msgstr ""
+
+#. module: hr_time_control
+#: code:addons/hr_time_control/models/time_logs.py:57
+#, python-format
+msgid "All the selected logs must be unprocessed to perform this action"
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.module.category,name:hr_time_control.time_control_security_category
+#: model:ir.ui.menu,name:hr_time_control.hr_time_config_label
+#: model:ir.ui.menu,name:hr_time_control.hr_time_label
+msgid "Attendance"
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.actions.act_window,name:hr_time_control.hr_time_action_action
+msgid "Attendance Action"
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.actions.act_window,name:hr_time_control.hr_time_logs_action
+#: model:ir.ui.menu,name:hr_time_control.hr_time_logs_menu
+msgid "Attendance Logs"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control,attendance_date:0
+msgid "Attendance date"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control,attendance_error:0
+msgid "Attendance error"
+msgstr ""
+
+#. module: hr_time_control
+#: view:hr.employee:hr_time_control.hr_employee_external_id
+#: model:ir.actions.act_window,name:hr_time_control.hr_time_control_action
+#: model:ir.ui.menu,name:hr_time_control.hr_time_control_menu
+msgid "Attendances"
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.actions.act_window,name:hr_time_control.time_control_wizard_action
+#: model:ir.ui.menu,name:hr_time_control.time_control_wizard_menu
+msgid "Attendances Report"
+msgstr ""
+
+#. module: hr_time_control
+#: view:hr.time.control.wizard:hr_time_control.time_control_wizard_view
+msgid "Cancel"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,create_uid:0
+#: field:hr.time.control,create_uid:0
+#: field:hr.time.control.wizard,create_uid:0
+#: field:hr.time.logs,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,create_date:0
+#: field:hr.time.control,create_date:0
+#: field:hr.time.control.wizard,create_date:0
+#: field:hr.time.logs,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Date From:"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Date To:"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control.wizard,date_from:0
+msgid "Date from"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control.wizard,date_to:0
+msgid "Date to"
+msgstr ""
+
+#. module: hr_time_control
+#: view:hr.time.control.wizard:hr_time_control.time_control_wizard_view
+msgid "Dates"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Day"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Days worked"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Difference"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,display_name:0
+#: field:hr.time.control,display_name:0
+#: field:hr.time.control.wizard,display_name:0
+#: field:hr.time.logs,display_name:0
+#: field:report.hr_time_control.attendance_template,display_name:0
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control,employee_id:0
+#: field:hr.time.logs,employee_id:0
+#: model:ir.model,name:hr_time_control.model_hr_employee
+msgid "Employee"
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.actions.report.xml,name:hr_time_control.attendance_report
+#: view:website:hr_time_control.attendance_template
+msgid "Employee Attendances Report"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.employee,employee_external_id:0
+#: field:hr.time.logs,employee_external_id:0
+msgid "Employee external id"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control.wizard,employee_ids:0
+msgid "Employee ids"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Employee:"
+msgstr ""
+
+#. module: hr_time_control
+#: view:hr.time.control.wizard:hr_time_control.time_control_wizard_view
+msgid "Employees"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Entry Date"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control,entry_date:0
+msgid "Entry date"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Exit Date"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control,exit_date:0
+msgid "Exit date"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control,hours:0
+#: view:website:hr_time_control.attendance_template
+msgid "Hours"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,id:0
+#: field:hr.time.control,id:0
+#: field:hr.time.control.wizard,id:0
+#: field:hr.time.logs,id:0
+#: field:report.hr_time_control.attendance_template,id:0
+msgid "ID"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,__last_update:0
+#: field:hr.time.control,__last_update:0
+#: field:hr.time.control.wizard,__last_update:0
+#: field:hr.time.logs,__last_update:0
+#: field:report.hr_time_control.attendance_template,__last_update:0
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,write_uid:0
+#: field:hr.time.control,write_uid:0
+#: field:hr.time.control.wizard,write_uid:0
+#: field:hr.time.logs,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,write_date:0
+#: field:hr.time.control,write_date:0
+#: field:hr.time.control.wizard,write_date:0
+#: field:hr.time.logs,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.logs,log_date:0
+msgid "Log date"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.logs,log_error:0
+msgid "Log error"
+msgstr ""
+
+#. module: hr_time_control
+#: model:res.groups,name:hr_time_control.group_time_control_manager
+msgid "Manager"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.action,name:0
+msgid "Name"
+msgstr ""
+
+#. module: hr_time_control
+#: selection:hr.time.action,action_type:0
+msgid "Other"
+msgstr ""
+
+#. module: hr_time_control
+#: view:hr.time.control.wizard:hr_time_control.time_control_wizard_view
+msgid "Print Report"
+msgstr ""
+
+#. module: hr_time_control
+#: model:ir.actions.server,name:hr_time_control.process_logs_action
+msgid "Process Logs"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.logs,processed:0
+msgid "Processed"
+msgstr ""
+
+#. module: hr_time_control
+#: view:hr.time.control.wizard:hr_time_control.time_control_wizard_view
+msgid "Report Options"
+msgstr ""
+
+#. module: hr_time_control
+#: selection:hr.time.action,action_type:0
+msgid "Sign in"
+msgstr ""
+
+#. module: hr_time_control
+#: selection:hr.time.action,action_type:0
+msgid "Sign out"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Theoretical hours"
+msgstr ""
+
+#. module: hr_time_control
+#: view:website:hr_time_control.attendance_template
+msgid "Total Hours"
+msgstr ""
+
+#. module: hr_time_control
+#: model:res.groups,name:hr_time_control.group_time_control_user
+msgid "User"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.control.wizard,working_time:0
+msgid "Working time"
+msgstr ""
+
+#. module: hr_time_control
+#: view:hr.time.control.wizard:hr_time_control.time_control_wizard_view
+msgid "or"
+msgstr ""
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Views -->
+        <record id="hr_time_control_tree_view" model="ir.ui.view">
+            <field name="name">hr.time.control.tree</field>
+            <field name="model">hr.time.control</field>
+            <field name="arch" type="xml">
+                <tree colors="red:attendance_error" default_order="attendance_date desc,entry_date desc">
+                    <field name="attendance_date"/>
+                    <field name="employee_id"/>
+                    <field name="entry_date"/>
+                    <field name="exit_date"/>
+                    <field name="hours" widget="float_time"/>
+                    <field name="attendance_error" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_time_control_form_view" model="ir.ui.view">
+            <field name="name">hr.time.control.form</field>
+            <field name="model">hr.time.control</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="employee_id" class="oe_edit_only"/>
+                            <h1>
+                                <field name="employee_id" options='{"no_create":True,"no_open": True}'/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="entry_date"/>
+                                <field name="exit_date"/>
+                            </group>
+                            <group>
+                                <field name="attendance_date"/>
+                                <field name="hours" widget="float_time"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record id="hr_time_control_action" model="ir.actions.act_window">
+            <field name="name">Attendances</field>
+            <field name="res_model">hr.time.control</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click create to add a new attendance.
+                </p>
+            </field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem sequence="10" id="hr_time_label" parent="hr.menu_hr_root" name="Attendance"/>
+        <menuitem sequence="5" id="hr_time_control_menu" parent="hr_time_label" name="Attendances"
+                  action="hr_time_control_action"/>
+    </data>
+</openerp>

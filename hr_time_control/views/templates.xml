@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="attendance_template">
+            <t t-call="report.html_container">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <h1>Employee Attendances Report</h1>
+                        <t t-foreach="recs.values()" t-as="rec">
+                            <div class="row mt32 mb32">
+                                <div class="col-xs-3">
+                                    <strong>Employee:</strong>
+                                    <p t-esc="rec['name']"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Date From:</strong>
+                                    <p t-esc="date_from" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Date To:</strong>
+                                    <p t-esc="date_to" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                </div>
+                            </div>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <th width="15%">
+                                        <strong>Day</strong>
+                                    </th>
+                                    <th width="35%" class="text-center">
+                                        <strong>Entry Date</strong>
+                                    </th>
+                                    <th width="35%" class="text-center">
+                                        <strong>Exit Date</strong>
+                                    </th>
+                                    <th width="15%" class="text-right">
+                                        <strong>Hours</strong>
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="rec['attendances']" t-as="atd">
+                                        <tr>
+                                            <td class="text-left">
+                                                <span t-esc="atd.attendance_date"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="atd.entry_date"/>
+                                            </td>
+                                            <td class="text-center">
+                                                <span t-esc="atd.exit_date"/>
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-esc="'%02d:%02d' % (int(str(atd.hours).split('.')[0]), int(float(str('%.2f' % atd.hours).split('.')[1])/100*60))"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                            <!-- Print totals -->
+                            <div class="row">
+                                <div class="col-xs-4 pull-right">
+                                    <table class="table table-condensed">
+                                        <tr class="border-black">
+                                            <td>
+                                                <strong>Total Hours</strong>
+                                            </td>
+                                            <td class="text-right">
+                                                <strong t-esc="'%02d:%02d' % (int(str(rec['total_hours']).split('.')[0]), int(float(str('%.2f' % rec['total_hours']).split('.')[1])/100*60))"/>
+                                            </td>
+                                        </tr>
+                                        <t t-set="theoretical_hours"
+                                           t-value="len(rec['distinct_days']) * working_time"/>
+                                        <tr class="mt8">
+                                            <td>
+                                                <span>Days worked</span>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-esc="len(rec['distinct_days'])"/>
+                                            </td>
+                                        </tr>
+                                        <tr class="mt8">
+                                            <td>
+                                                <span>Theoretical hours</span>
+                                            </td>
+                                            <td class="text-right">
+                                                <span t-esc="'%02d:%02d' % (int(str(theoretical_hours).split('.')[0]), int(float(str('%.2f' % theoretical_hours).split('.')[1])/100*60))"/>
+                                            </td>
+                                        </tr>
+                                        <tr class="border-black">
+                                            <td>
+                                                <strong>Difference</strong>
+                                            </td>
+                                            <td class="text-right">
+                                                <t t-set="difference" t-value="rec['total_hours'] - theoretical_hours"/>
+                                                <strong t-esc="'%02d:%02d' % (int(str(difference).split('.')[0]), int(float(str('%.2f' % difference).split('.')[1])/100*60))"/>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <p style="page-break-after:always;"/>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>

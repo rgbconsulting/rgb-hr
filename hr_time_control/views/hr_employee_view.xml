@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="hr_employee_external_id" model="ir.ui.view">
+            <field name="name">hr.employee.external.id</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <field name="active" position="before">
+                    <field name="employee_external_code" style="width:25%%"/>
+                </field>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_attendances_view"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-clock-o"
+                            attrs="{'invisible': [('attendance_count', '=', 0)]}">
+                        <field name="attendance_count" widget="statinfo" string="Attendances"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

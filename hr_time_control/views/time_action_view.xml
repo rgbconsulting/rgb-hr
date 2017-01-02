@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Views -->
+        <record id="hr_time_action_tree_view" model="ir.ui.view">
+            <field name="name">hr.time.action.tree</field>
+            <field name="model">hr.time.action</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="action_external_code"/>
+                    <field name="action_type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_time_action_form_view" model="ir.ui.view">
+            <field name="name">hr.time.action.form</field>
+            <field name="model">hr.time.action</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="action_type"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="action_external_code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record id="hr_time_action_action" model="ir.actions.act_window">
+            <field name="name">Attendance Action</field>
+            <field name="res_model">hr.time.action</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click create to define a new action.
+                </p>
+            </field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem sequence="40" id="hr_time_config_label" parent="hr.menu_hr_configuration" name="Attendance"
+                  groups="group_time_control_manager"/>
+        <menuitem sequence="5" id="hr_time_action_config_menu" parent="hr_time_config_label" name="Actions"
+                  action="hr_time_action_action"/>
+    </data>
+</openerp>

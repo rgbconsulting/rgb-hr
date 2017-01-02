@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Wizard view -->
+        <record id="time_control_wizard_view" model="ir.ui.view">
+            <field name="name">Time Control Report</field>
+            <field name="model">hr.time.control.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Report Options">
+                    <group string="Dates">
+                        <group>
+                            <group>
+                                <field name="date_from"/>
+                                <field name="working_time"/>
+                            </group>
+                            <group>
+                                <field name="date_to"/>
+                            </group>
+                        </group>
+                    </group>
+                    <separator string="Employees"/>
+                    <field name="employee_ids">
+                        <tree>
+                            <field name="name"/>
+                            <field name="user_id"/>
+                            <field name="employee_external_code"/>
+                        </tree>
+                    </field>
+                    <footer>
+                        <button name="print_report" type="object" string="Print Report" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Wizard action -->
+        <record id="time_control_wizard_action" model="ir.actions.act_window">
+            <field name="name">Attendances Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.time.control.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Wizard menu -->
+        <menuitem id="time_control_wizard_menu" name="Attendances Report" parent="hr_time_label"
+                  action="time_control_wizard_action" sequence="20" groups="group_time_control_manager"/>
+    </data>
+</openerp>

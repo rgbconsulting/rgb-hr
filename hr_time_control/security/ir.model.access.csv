@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_time_control_user,hr.time.control.user,model_hr_time_control,group_time_control_user,1,0,0,0
+access_time_control_manager,hr.time.control.manager,model_hr_time_control,group_time_control_manager,1,1,1,1
+access_time_action_manager,hr.time.action.manager,model_hr_time_action,group_time_control_manager,1,1,1,1
+access_time_logs_manager,hr.time.logs.manager,model_hr_time_logs,group_time_control_manager,1,1,1,1

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Views -->
+        <record id="hr_time_logs_tree_view" model="ir.ui.view">
+            <field name="name">hr.time.logs.tree</field>
+            <field name="model">hr.time.logs</field>
+            <field name="arch" type="xml">
+                <tree colors="red:error;grey:processed" default_order="date desc">
+                    <field name="employee_id"/>
+                    <field name="employee_external_code"/>
+                    <field name="date"/>
+                    <field name="action"/>
+                    <field name="processed"/>
+                    <field name="error" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_time_logs_form_view" model="ir.ui.view">
+            <field name="name">hr.time.logs.form</field>
+            <field name="model">hr.time.logs</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id" widget="selection"/>
+                                <field name="date"/>
+                                <field name="action"/>
+                            </group>
+                            <group>
+                                <field name="employee_external_code"/>
+                                <field name="processed"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record id="hr_time_logs_action" model="ir.actions.act_window">
+            <field name="name">Attendance Logs</field>
+            <field name="res_model">hr.time.logs</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click create to add a new log.
+                </p>
+            </field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem sequence="10" id="hr_time_logs_menu" parent="hr_time_label" name="Attendance Logs"
+                  action="hr_time_logs_action" groups="group_time_control_manager"/>
+
+        <!-- Process logs action and binding -->
+        <record id="process_logs_action" model="ir.actions.server">
+            <field name="name">Process Logs</field>
+            <field name="model_id" ref="model_hr_time_logs"/>
+            <field name="state">code</field>
+            <field name="code">self.process_logs(cr, user.id, context.get('active_ids', []), context=context)
+            </field>
+        </record>
+
+        <record id="process_logs_bind" model="ir.values">
+            <field name="name">Process Logs</field>
+            <field name="key2" eval="'client_action_multi'"/>
+            <field name="model" eval="'hr.time.logs'"/>
+            <field name="value" eval="'ir.actions.server,%d'%process_logs_action"/>
+        </record>
+    </data>
+</openerp>

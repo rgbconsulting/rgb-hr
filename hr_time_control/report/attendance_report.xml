@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report
+                id="attendance_report"
+                string="Employee Attendances Report"
+                model="hr.time.control"
+                report_type="qweb-pdf"
+                name="hr_time_control.attendance_template"
+                file="hr_time_control.attendance_template"
+                attachment_use="False"
+        />
+    </data>
+</openerp>
