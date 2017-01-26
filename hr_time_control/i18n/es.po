@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-18 08:55+0000\n"
-"PO-Revision-Date: 2016-11-18 08:55+0000\n"
+"POT-Creation-Date: 2017-01-26 16:02+0000\n"
+"PO-Revision-Date: 2017-01-26 16:02+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -54,14 +54,14 @@ msgstr "<p class=\"oe_view_nocontent_create\">\n"
 "            "
 
 #. module: hr_time_control
-#: field:hr.time.logs,log_action:0
+#: field:hr.time.logs,action:0
 msgid "Action"
 msgstr "Acción"
 
 #. module: hr_time_control
-#: field:hr.time.action,action_external_id:0
-msgid "Action external id"
-msgstr "Identificador externo"
+#: field:hr.time.action,action_external_code:0
+msgid "Action external code"
+msgstr "Código externo de acción"
 
 #. module: hr_time_control
 #: field:hr.time.action,action_type:0
@@ -142,6 +142,11 @@ msgid "Created on"
 msgstr "Creado en"
 
 #. module: hr_time_control
+#: field:hr.time.logs,date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: hr_time_control
 #: view:website:hr_time_control.attendance_template
 msgid "Date From:"
 msgstr "Fecha entrada:"
@@ -204,10 +209,10 @@ msgid "Employee Attendances Report"
 msgstr "Informe de asistencia de empleados"
 
 #. module: hr_time_control
-#: field:hr.employee,employee_external_id:0
-#: field:hr.time.logs,employee_external_id:0
-msgid "Employee external id"
-msgstr "Identificador externo"
+#: field:hr.employee,employee_external_code:0
+#: field:hr.time.logs,employee_external_code:0
+msgid "Employee external code"
+msgstr "Código externo del empleado"
 
 #. module: hr_time_control
 #: field:hr.time.control.wizard,employee_ids:0
@@ -233,6 +238,11 @@ msgstr "Fecha de entrada"
 #: field:hr.time.control,entry_date:0
 msgid "Entry date"
 msgstr "Fecha de entrada"
+
+#. module: hr_time_control
+#: field:hr.time.logs,error:0
+msgid "Error"
+msgstr "Error"
 
 #. module: hr_time_control
 #: view:website:hr_time_control.attendance_template
@@ -283,16 +293,6 @@ msgstr "Última actualización por"
 #: field:hr.time.logs,write_date:0
 msgid "Last Updated on"
 msgstr "Ultima actualizacion en"
-
-#. module: hr_time_control
-#: field:hr.time.logs,log_date:0
-msgid "Log date"
-msgstr "Fecha del registro"
-
-#. module: hr_time_control
-#: field:hr.time.logs,log_error:0
-msgid "Log error"
-msgstr "Error de registro"
 
 #. module: hr_time_control
 #: model:res.groups,name:hr_time_control.group_time_control_manager

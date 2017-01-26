@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-18 08:55+0000\n"
-"PO-Revision-Date: 2016-11-18 08:55+0000\n"
+"POT-Creation-Date: 2017-01-26 15:59+0000\n"
+"PO-Revision-Date: 2017-01-26 15:59+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -45,13 +45,13 @@ msgid "<p class=\"oe_view_nocontent_create\">\n"
 msgstr ""
 
 #. module: hr_time_control
-#: field:hr.time.logs,log_action:0
+#: field:hr.time.logs,action:0
 msgid "Action"
 msgstr ""
 
 #. module: hr_time_control
-#: field:hr.time.action,action_external_id:0
-msgid "Action external id"
+#: field:hr.time.action,action_external_code:0
+msgid "Action external code"
 msgstr ""
 
 #. module: hr_time_control
@@ -133,6 +133,11 @@ msgid "Created on"
 msgstr ""
 
 #. module: hr_time_control
+#: field:hr.time.logs,date:0
+msgid "Date"
+msgstr ""
+
+#. module: hr_time_control
 #: view:website:hr_time_control.attendance_template
 msgid "Date From:"
 msgstr ""
@@ -195,9 +200,9 @@ msgid "Employee Attendances Report"
 msgstr ""
 
 #. module: hr_time_control
-#: field:hr.employee,employee_external_id:0
-#: field:hr.time.logs,employee_external_id:0
-msgid "Employee external id"
+#: field:hr.employee,employee_external_code:0
+#: field:hr.time.logs,employee_external_code:0
+msgid "Employee external code"
 msgstr ""
 
 #. module: hr_time_control
@@ -223,6 +228,11 @@ msgstr ""
 #. module: hr_time_control
 #: field:hr.time.control,entry_date:0
 msgid "Entry date"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.logs,error:0
+msgid "Error"
 msgstr ""
 
 #. module: hr_time_control
@@ -273,16 +283,6 @@ msgstr ""
 #: field:hr.time.control.wizard,write_date:0
 #: field:hr.time.logs,write_date:0
 msgid "Last Updated on"
-msgstr ""
-
-#. module: hr_time_control
-#: field:hr.time.logs,log_date:0
-msgid "Log date"
-msgstr ""
-
-#. module: hr_time_control
-#: field:hr.time.logs,log_error:0
-msgid "Log error"
 msgstr ""
 
 #. module: hr_time_control
