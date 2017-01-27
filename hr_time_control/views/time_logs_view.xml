@@ -11,6 +11,7 @@
                     <field name="employee_external_code"/>
                     <field name="date"/>
                     <field name="action"/>
+                    <field name="action_external_code" />
                     <field name="processed"/>
                     <field name="error" invisible="1"/>
                 </tree>
@@ -32,6 +33,7 @@
                             <group>
                                 <field name="employee_external_code"/>
                                 <field name="processed"/>
+                                <field name="action_external_code" />
                             </group>
                         </group>
                     </sheet>

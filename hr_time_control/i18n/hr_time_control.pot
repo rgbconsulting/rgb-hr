@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-26 15:59+0000\n"
-"PO-Revision-Date: 2017-01-26 15:59+0000\n"
+"POT-Creation-Date: 2017-01-27 09:28+0000\n"
+"PO-Revision-Date: 2017-01-27 09:28+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -51,6 +51,7 @@ msgstr ""
 
 #. module: hr_time_control
 #: field:hr.time.action,action_external_code:0
+#: field:hr.time.logs,action_external_code:0
 msgid "Action external code"
 msgstr ""
 
@@ -65,7 +66,7 @@ msgid "Actions"
 msgstr ""
 
 #. module: hr_time_control
-#: code:addons/hr_time_control/models/time_logs.py:57
+#: code:addons/hr_time_control/models/time_logs.py:58
 #, python-format
 msgid "All the selected logs must be unprocessed to perform this action"
 msgstr ""

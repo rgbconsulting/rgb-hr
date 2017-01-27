@@ -11,7 +11,8 @@ class TimeLogs(models.Model):
     _name = 'hr.time.logs'
 
     employee_id = fields.Many2one(comodel_name='hr.employee', string='Employee')
-    employee_external_code = fields.Char()
+    employee_external_code = fields.Char(string="Employee external code")
+    action_external_code = fields.Char(string="Action external code")
     date = fields.Datetime(required=True, default=fields.Datetime.now())
     action = fields.Many2one(comodel_name='hr.time.action', string='Action')
     processed = fields.Boolean()
@@ -57,6 +58,7 @@ class TimeLogs(models.Model):
             raise Warning(_('All the selected logs must be unprocessed to perform this action'))
         else:
             employee_model = self.env['hr.employee']
+            action_model = self.env['hr.time.action']
             # Iterate records sorted by date
             for log in self.sorted(key=lambda rec: rec.date):
                 log.error = False
@@ -68,8 +70,15 @@ class TimeLogs(models.Model):
                         limit=1)
                     if log_employee:
                         log.employee_id = log_employee
-                # If no employee mark as error and skip
-                if not log_employee:
+                log_action = log.action
+                if not log_action and log.action_external_code:
+                    log_action = action_model.search(
+                        [('action_external_code', '=like', log.action_external_code)],
+                        limit=1)
+                    if log_action:
+                        log.action = log_action
+                # If no employee or action mark as error and skip
+                if not log_employee or not log_action:
                     log.error = True
                     continue
                 # Process log
