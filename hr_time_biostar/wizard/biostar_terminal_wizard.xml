@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Wizard view -->
+        <record id="hr_time_biostar_wizard_view" model="ir.ui.view">
+            <field name="name">Biostar Terminal Logs</field>
+            <field name="model">hr.time.biostar.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Biostar Terminal Logs">
+                    <p>From this tool you will be able to import and process the logs from the configured Biostar
+                        terminals.
+                    </p>
+                    <group>
+                        <field name="terminal_id" widget="selection"/>
+                        <field name="process_logs"/>
+                        <field name="clear_logs"/>
+                    </group>
+                    <footer>
+                        <button name="action_get_logs" type="object" string="Import" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <!-- Wizard action -->
+        <record id="hr_time_biostar_wizard_action" model="ir.actions.act_window">
+            <field name="name">Time Control Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.time.biostar.wizard</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <!-- Wizard menu -->
+        <menuitem id="time_logs_wizard_menu" name="Biostar Terminal Logs" parent="hr_time_control.hr_time_label"
+                  sequence="40" action="hr_time_biostar_wizard_action"
+                  groups="hr_time_control.group_time_control_manager"/>
+    </data>
+</openerp>

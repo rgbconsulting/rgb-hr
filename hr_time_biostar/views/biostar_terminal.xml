@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- Views -->
+        <record id="hr_time_biostar_terminal_tree_view" model="ir.ui.view">
+            <field name="name">hr.time.biostar.terminal.tree</field>
+            <field name="model">hr.biostar.terminal</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="port"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_time_biostar_terminal_form_view" model="ir.ui.view">
+            <field name="name">hr.time.biostar.terminal.form</field>
+            <field name="model">hr.biostar.terminal</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="code"/>
+                            </group>
+                            <group>
+                                <field name="address"/>
+                                <field name="port"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Actions -->
+        <record id="hr_time_biostar_action" model="ir.actions.act_window">
+            <field name="name">Biostar terminals</field>
+            <field name="res_model">hr.biostar.terminal</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click create to add a new terminal.
+                </p>
+            </field>
+        </record>
+
+        <!-- Menus -->
+        <menuitem sequence="20" id="hr_time_biostar_menu" parent="hr_time_control.hr_time_config_label"
+                  name="Biostar Terminals" action="hr_time_biostar_action"
+                  groups="hr_time_control.group_time_control_manager"/>
+    </data>
+</openerp>
