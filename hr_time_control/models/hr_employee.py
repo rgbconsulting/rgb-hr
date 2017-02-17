@@ -7,7 +7,7 @@ from openerp import fields, models, api
 class HrEmployee(models.Model):
     _inherit = 'hr.employee'
 
-    employee_external_code = fields.Char()
+    external_code = fields.Char()
     attendance_count = fields.Integer(string='# of Attendances', compute='_count_attendances', readonly=True)
 
     def _count_attendances(self):

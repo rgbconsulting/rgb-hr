@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
                 <field name="active" position="before">
-                    <field name="employee_external_code" style="width:25%%"/>
+                    <field name="external_code" style="width:25%%"/>
                 </field>
                 <xpath expr="//div[@name='button_box']" position="inside">
                     <button name="action_attendances_view"

@@ -50,9 +50,13 @@ msgid "Action"
 msgstr ""
 
 #. module: hr_time_control
-#: field:hr.time.action,action_external_code:0
-#: field:hr.time.logs,action_external_code:0
-msgid "Action external code"
+#: field:hr.time.action,external_code:0
+msgid "External code"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.logs,action_code:0
+msgid "Action code"
 msgstr ""
 
 #. module: hr_time_control
@@ -201,9 +205,13 @@ msgid "Employee Attendances Report"
 msgstr ""
 
 #. module: hr_time_control
-#: field:hr.employee,employee_external_code:0
-#: field:hr.time.logs,employee_external_code:0
-msgid "Employee external code"
+#: field:hr.employee,external_code:0
+msgid "External code"
+msgstr ""
+
+#. module: hr_time_control
+#: field:hr.time.logs,employee_code:0
+msgid "Employee code"
 msgstr ""
 
 #. module: hr_time_control

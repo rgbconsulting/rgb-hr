@@ -6,12 +6,12 @@
             <field name="name">hr.time.logs.tree</field>
             <field name="model">hr.time.logs</field>
             <field name="arch" type="xml">
-                <tree colors="red:error;grey:processed" default_order="date desc">
+                <tree colors="red:error;grey:processed" default_order="date">
                     <field name="employee_id"/>
-                    <field name="employee_external_code"/>
+                    <field name="employee_code"/>
                     <field name="date"/>
-                    <field name="action"/>
-                    <field name="action_external_code" />
+                    <field name="action_id"/>
+                    <field name="action_code" />
                     <field name="processed"/>
                     <field name="error" invisible="1"/>
                 </tree>
@@ -26,14 +26,15 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="employee_id" widget="selection"/>
                                 <field name="date"/>
-                                <field name="action"/>
+                                <field name="employee_id" widget="selection"/>
+                                <field name="action_id" widget="selection"/>
+                                <field name="error"/>
                             </group>
                             <group>
-                                <field name="employee_external_code"/>
                                 <field name="processed"/>
-                                <field name="action_external_code" />
+                                <field name="employee_code"/>
+                                <field name="action_code" />
                             </group>
                         </group>
                     </sheet>
@@ -55,7 +56,7 @@
         </record>
 
         <!-- Menus -->
-        <menuitem sequence="10" id="hr_time_logs_menu" parent="hr_time_label" name="Attendance Logs"
+        <menuitem sequence="30" id="hr_time_logs_menu" parent="hr_time_label" name="Attendance Logs"
                   action="hr_time_logs_action" groups="group_time_control_manager"/>
 
         <!-- Process logs action and binding -->

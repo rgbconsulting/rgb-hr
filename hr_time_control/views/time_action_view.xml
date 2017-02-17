@@ -8,8 +8,8 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="name"/>
-                    <field name="action_external_code"/>
                     <field name="action_type"/>
+                    <field name="external_code"/>
                 </tree>
             </field>
         </record>
@@ -23,13 +23,11 @@
                         <group>
                             <group>
                                 <field name="name"/>
-                            </group>
-                            <group>
                                 <field name="action_type"/>
                             </group>
-                        </group>
-                        <group>
-                            <field name="action_external_code"/>
+                            <group>
+                                <field name="external_code"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
