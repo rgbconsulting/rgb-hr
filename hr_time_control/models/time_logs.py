@@ -25,7 +25,7 @@ class TimeLogs(models.Model):
         entry_date = self.date
         att_date = str(datetime.strptime(entry_date, DEFAULT_SERVER_DATETIME_FORMAT).date())
         time_control_model = self.env['hr.time.control']
-        control_rec = time_control_model.search([('employee_id', '=', employee_id), ('attendance_date', '>=', att_date),
+        control_rec = time_control_model.search([('employee_id', '=', employee_id), ('attendance_date', '=', att_date),
                                                  ('entry_date', '=', False), ('exit_date', '>=', entry_date)],
                                                 order='exit_date', limit=1)
         if control_rec:
@@ -44,7 +44,7 @@ class TimeLogs(models.Model):
         exit_date = self.date
         att_date = str(datetime.strptime(exit_date, DEFAULT_SERVER_DATETIME_FORMAT).date())
         time_control_model = self.env['hr.time.control']
-        control_rec = time_control_model.search([('employee_id', '=', employee_id), ('attendance_date', '<=', att_date),
+        control_rec = time_control_model.search([('employee_id', '=', employee_id), ('attendance_date', '=', att_date),
                                                  ('exit_date', '=', False), ('entry_date', '<=', exit_date)],
                                                 order='entry_date desc', limit=1)
         if control_rec:
