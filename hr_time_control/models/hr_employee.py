@@ -11,7 +11,8 @@ class HrEmployee(models.Model):
     attendance_count = fields.Integer(string='# of Attendances', compute='_count_attendances', readonly=True)
 
     def _count_attendances(self):
-        self.attendance_count = self.env['hr.time.control'].search_count([('employee_id', '=', self.id)])
+        for rec in self:
+            rec.attendance_count = self.env['hr.time.control'].search_count([('employee_id', '=', rec.id)])
 
     @api.multi
     def action_attendances_view(self):
