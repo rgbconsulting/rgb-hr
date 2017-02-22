@@ -1,7 +1,7 @@
 HR Time Biostar
 ===============
 
-This module extends hr_time_control to support biostart devices.
+This module extends hr_time_control to support biostar devices.
 
 Instalation
 -----------

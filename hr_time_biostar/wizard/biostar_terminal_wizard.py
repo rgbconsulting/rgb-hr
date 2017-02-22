@@ -44,7 +44,7 @@ class BiostarTerminalWizard(models.TransientModel):
         try:
             cmd_out = check_output([bs_command, 'getlog', address, port, filename])
         except BaseException as e:
-            raise Warning(_('Biostart device error') + " : " + str(e))
+            raise Warning(_('Biostar device error') + " : " + str(e))
         # Import device logs
         with open(filename) as csvfile:
             hr_time_logs = self.env['hr.time.logs']
@@ -62,4 +62,4 @@ class BiostarTerminalWizard(models.TransientModel):
             try:
                 cmd_out = check_output([bs_command, 'clearlog', address, port])
             except BaseException as e:
-                raise Warning(_('Biostart device error') + " : " + str(e))
+                raise Warning(_('Biostar device error') + " : " + str(e))

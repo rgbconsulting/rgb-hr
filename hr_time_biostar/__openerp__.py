@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #   HR Time Biostar
-#   Copyright 2016 RGB Consulting, SL
+#   Copyright 2017 RGB Consulting, SL
 #
 #   This program is free software: you can redistribute it and/or modify
 #   it under the terms of the GNU Affero General Public License as

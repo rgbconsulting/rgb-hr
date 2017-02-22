@@ -1,0 +1,171 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_time_biostar
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-22 10:04+0000\n"
+"PO-Revision-Date: 2017-02-22 10:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_time_biostar
+#: model:ir.actions.act_window,help:hr_time_biostar.hr_time_biostar_action
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                    Click create to add a new terminal.\n"
+"                </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                    Faci clic per afegir un nou terminal.\n"
+"                </p>\n"
+"            "
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,address:0
+msgid "Address"
+msgstr "Adreça"
+
+#. module: hr_time_biostar
+#: view:hr.time.biostar.wizard:hr_time_biostar.hr_time_biostar_wizard_view
+#: model:ir.ui.menu,name:hr_time_biostar.time_logs_wizard_menu
+msgid "Biostar Terminal Logs"
+msgstr "Registres del Terminal Biostar"
+
+#. module: hr_time_biostar
+#: model:ir.ui.menu,name:hr_time_biostar.hr_time_biostar_menu
+msgid "Biostar Terminals"
+msgstr "Terminals Biostar"
+
+#. module: hr_time_biostar
+#: model:ir.actions.act_window,name:hr_time_biostar.hr_time_biostar_action
+msgid "Biostar terminals"
+msgstr "Terminals Biostar"
+
+#. module: hr_time_biostar
+#: code:addons/hr_time_biostar/wizard/biostar_terminal_wizard.py:47
+#: code:addons/hr_time_biostar/wizard/biostar_terminal_wizard.py:65
+#, python-format
+msgid "Biostar device error"
+msgstr "Error al dispositiu Biostar"
+
+#. module: hr_time_biostar
+#: view:hr.time.biostar.wizard:hr_time_biostar.hr_time_biostar_wizard_view
+msgid "Cancel"
+msgstr "Cancel·lar"
+
+#. module: hr_time_biostar
+#: help:hr.time.biostar.wizard,clear_logs:0
+msgid "Clear logs stored in device after import success."
+msgstr "Netejar els registres guardats al dispositiu després d'una importació satisfactòria."
+
+#. module: hr_time_biostar
+#: field:hr.time.biostar.wizard,clear_logs:0
+msgid "Clear terminal logs"
+msgstr "Netejar els registres del terminal"
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,code:0
+msgid "Code"
+msgstr "Codi"
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,create_uid:0
+#: field:hr.time.biostar.wizard,create_uid:0
+msgid "Created by"
+msgstr "Creat per"
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,create_date:0
+#: field:hr.time.biostar.wizard,create_date:0
+msgid "Created on"
+msgstr "Creat en"
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,display_name:0
+#: field:hr.time.biostar.wizard,display_name:0
+msgid "Display Name"
+msgstr "Mostrar nom"
+
+#. module: hr_time_biostar
+#: view:hr.time.biostar.wizard:hr_time_biostar.hr_time_biostar_wizard_view
+msgid "From this tool you will be able to import and process the logs from the configured Biostar\n"
+"                        terminals."
+msgstr "Des d'aquesta eina seràs capaç d'importar i processar els registres des dels terminals de Biostar\n"
+"                        configurats."
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,id:0
+#: field:hr.time.biostar.wizard,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: hr_time_biostar
+#: view:hr.time.biostar.wizard:hr_time_biostar.hr_time_biostar_wizard_view
+msgid "Import"
+msgstr "Importar"
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,__last_update:0
+#: field:hr.time.biostar.wizard,__last_update:0
+msgid "Last Modified on"
+msgstr "Última modificació en"
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,write_uid:0
+#: field:hr.time.biostar.wizard,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualització per"
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,write_date:0
+#: field:hr.time.biostar.wizard,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualització en"
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,name:0
+msgid "Name"
+msgstr "Nom"
+
+#. module: hr_time_biostar
+#: field:hr.biostar.terminal,port:0
+msgid "Port"
+msgstr "Port"
+
+#. module: hr_time_biostar
+#: help:hr.time.biostar.wizard,process_logs:0
+msgid "Process attendances of all imported logs"
+msgstr "Processar les assistències dels registres importats"
+
+#. module: hr_time_biostar
+#: field:hr.time.biostar.wizard,process_logs:0
+msgid "Process imported logs"
+msgstr "Processar els registres importats"
+
+#. module: hr_time_biostar
+#: code:addons/hr_time_biostar/wizard/biostar_terminal_wizard.py:37
+#, python-format
+msgid "Select one terminal."
+msgstr "Seleccioni un terminal."
+
+#. module: hr_time_biostar
+#: field:hr.time.biostar.wizard,terminal_id:0
+msgid "Terminal"
+msgstr "Terminal"
+
+#. module: hr_time_biostar
+#: model:ir.actions.act_window,name:hr_time_biostar.hr_time_biostar_wizard_action
+msgid "Time Control Report"
+msgstr "Informe de control de temps"
+
+#. module: hr_time_biostar
+#: view:hr.time.biostar.wizard:hr_time_biostar.hr_time_biostar_wizard_view
+msgid "or"
+msgstr "o"
+
