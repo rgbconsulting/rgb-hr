@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-27 09:28+0000\n"
-"PO-Revision-Date: 2017-01-27 09:28+0000\n"
+"POT-Creation-Date: 2017-02-23 16:43+0000\n"
+"PO-Revision-Date: 2017-02-23 16:43+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -54,14 +54,9 @@ msgstr "<p class=\"oe_view_nocontent_create\">\n"
 "            "
 
 #. module: hr_time_control
-#: field:hr.time.logs,action:0
+#: field:hr.time.logs,action_id:0
 msgid "Action"
 msgstr "Acció"
-
-#. module: hr_time_control
-#: field:hr.time.action,external_code:0
-msgid "External code"
-msgstr "Codi extern"
 
 #. module: hr_time_control
 #: field:hr.time.logs,action_code:0
@@ -79,7 +74,7 @@ msgid "Actions"
 msgstr "Accions"
 
 #. module: hr_time_control
-#: code:addons/hr_time_control/models/time_logs.py:58
+#: code:addons/hr_time_control/models/time_logs.py:64
 #, python-format
 msgid "All the selected logs must be unprocessed to perform this action"
 msgstr "Tots els registres seleccionats han d'estar sense processar per realitzar aquesta acció"
@@ -147,6 +142,13 @@ msgid "Created on"
 msgstr "Creat el"
 
 #. module: hr_time_control
+#: view:hr.time.control:hr_time_control.view_hr_time_control_filter
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "Current Month"
+msgstr "Mes actual"
+
+#. module: hr_time_control
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
 #: field:hr.time.logs,date:0
 msgid "Date"
 msgstr "Data"
@@ -202,6 +204,7 @@ msgstr "Nom Mostrat"
 
 #. module: hr_time_control
 #: field:hr.time.control,employee_id:0
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
 #: field:hr.time.logs,employee_id:0
 #: model:ir.model,name:hr_time_control.model_hr_employee
 msgid "Employee"
@@ -212,11 +215,6 @@ msgstr "Empleat"
 #: view:website:hr_time_control.attendance_template
 msgid "Employee Attendances Report"
 msgstr "Informe d'assistència d'empleats"
-
-#. module: hr_time_control
-#: field:hr.employee,external_code:0
-msgid "External code"
-msgstr "Codi extern"
 
 #. module: hr_time_control
 #: field:hr.time.logs,employee_code:0
@@ -249,6 +247,7 @@ msgid "Entry date"
 msgstr "Data d'entrada"
 
 #. module: hr_time_control
+#: view:hr.time.control:hr_time_control.view_hr_time_control_filter
 #: field:hr.time.logs,error:0
 msgid "Error"
 msgstr "Error"
@@ -262,6 +261,17 @@ msgstr "Data de sortida"
 #: field:hr.time.control,exit_date:0
 msgid "Exit date"
 msgstr "Data de sortida"
+
+#. module: hr_time_control
+#: field:hr.employee,external_code:0
+#: field:hr.time.action,external_code:0
+msgid "External code"
+msgstr "Codi extern"
+
+#. module: hr_time_control
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "Group By"
+msgstr "Agrupar per"
 
 #. module: hr_time_control
 #: field:hr.time.control,hours:0
@@ -301,12 +311,18 @@ msgstr "Última actualització per"
 #: field:hr.time.control.wizard,write_date:0
 #: field:hr.time.logs,write_date:0
 msgid "Last Updated on"
-msgstr "Ultima actualizacion en"
+msgstr "Última actualizació en"
 
 #. module: hr_time_control
 #: model:res.groups,name:hr_time_control.group_time_control_manager
 msgid "Manager"
 msgstr "Director"
+
+#. module: hr_time_control
+#: view:hr.time.control:hr_time_control.view_hr_time_control_filter
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "Month"
+msgstr "Mes"
 
 #. module: hr_time_control
 #: field:hr.time.action,name:0
@@ -329,6 +345,7 @@ msgid "Process Logs"
 msgstr "Processar registres"
 
 #. module: hr_time_control
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
 #: field:hr.time.logs,processed:0
 msgid "Processed"
 msgstr "Processat"
@@ -337,6 +354,12 @@ msgstr "Processat"
 #: view:hr.time.control.wizard:hr_time_control.time_control_wizard_view
 msgid "Report Options"
 msgstr "Opcions de l'informe"
+
+#. module: hr_time_control
+#: view:hr.time.control:hr_time_control.view_hr_time_control_filter
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "Search Time Control"
+msgstr "Search Time Control"
 
 #. module: hr_time_control
 #: selection:hr.time.action,action_type:0
@@ -354,6 +377,17 @@ msgid "Theoretical hours"
 msgstr "Hores teòriques"
 
 #. module: hr_time_control
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "To process"
+msgstr "Per processar"
+
+#. module: hr_time_control
+#: view:hr.time.control:hr_time_control.view_hr_time_control_filter
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "Today"
+msgstr "Avui"
+
+#. module: hr_time_control
 #: view:website:hr_time_control.attendance_template
 msgid "Total Hours"
 msgstr "Total d'hores"
@@ -362,6 +396,11 @@ msgstr "Total d'hores"
 #: model:res.groups,name:hr_time_control.group_time_control_user
 msgid "User"
 msgstr "Usuari"
+
+#. module: hr_time_control
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "With Error"
+msgstr "Amb error"
 
 #. module: hr_time_control
 #: field:hr.time.control.wizard,working_time:0

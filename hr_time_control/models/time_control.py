@@ -10,7 +10,7 @@ from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
 class TimeControl(models.Model):
     _name = 'hr.time.control'
 
-    attendance_date = fields.Datetime(required=True, index=True)
+    attendance_date = fields.Date(required=True, index=True)
     employee_id = fields.Many2one(comodel_name='hr.employee', string='Employee', required=True)
     entry_date = fields.Datetime()
     exit_date = fields.Datetime()

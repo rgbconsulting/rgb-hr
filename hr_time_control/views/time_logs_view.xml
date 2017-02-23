@@ -11,7 +11,7 @@
                     <field name="employee_code"/>
                     <field name="date"/>
                     <field name="action_id"/>
-                    <field name="action_code" />
+                    <field name="action_code"/>
                     <field name="processed"/>
                     <field name="error" invisible="1"/>
                 </tree>
@@ -34,11 +34,37 @@
                             <group>
                                 <field name="processed"/>
                                 <field name="employee_code"/>
-                                <field name="action_code" />
+                                <field name="action_code"/>
                             </group>
                         </group>
                     </sheet>
                 </form>
+            </field>
+        </record>
+
+        <!-- Search,filters and groups -->
+        <record id="view_hr_time_logs_filter" model="ir.ui.view">
+            <field name="name">hr_time_logs.sheet.filter</field>
+            <field name="model">hr.time.logs</field>
+            <field name="arch" type="xml">
+                <search string="Search Time Control">
+                    <field name="employee_id"/>
+                    <field name="action_code"/>
+                    <field name="date"/>
+                    <filter string="To process" name="to_process" domain="[('processed','=',False)]"/>
+                    <filter string="Processed" name="processed" domain="[('processed','=',True)]"/>
+                    <filter string="With Error" name="error" domain="[('attendance_error','=',True)]"/>
+                    <filter name="today" string="Today " separator="1"
+                            domain="[('date','=', (datetime.datetime.today()).strftime('%Y-%m-%d'))]"
+                            help="Today"/>
+                    <filter string="Month" name="month"
+                            domain="[('date','&gt;=',(context_today()-relativedelta(years=1)).strftime('%%Y-%%m-01')),('date','&lt;',time.strftime('%%Y-%%m-01'))]"
+                            help="Current Month"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Employee" domain="" context="{'group_by':'employee_id'}"/>
+                        <filter string="Date" domain="" context="{'group_by':'date'}"/>
+                    </group>
+                </search>
             </field>
         </record>
 
@@ -48,6 +74,7 @@
             <field name="res_model">hr.time.logs</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_to_process': 1}</field>
             <field name="help" type="html">
                 <p class="oe_view_nocontent_create">
                     Click create to add a new log.
@@ -74,5 +101,6 @@
             <field name="model" eval="'hr.time.logs'"/>
             <field name="value" eval="'ir.actions.server,%d'%process_logs_action"/>
         </record>
+
     </data>
 </openerp>
