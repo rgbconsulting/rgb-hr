@@ -3,7 +3,8 @@
 
 from datetime import datetime
 
-from openerp import fields, models, api
+from openerp import fields, models, api, _
+from openerp.exceptions import except_orm
 from openerp.tools import DEFAULT_SERVER_DATETIME_FORMAT
 
 
@@ -15,7 +16,7 @@ class TimeControl(models.Model):
     entry_date = fields.Datetime()
     exit_date = fields.Datetime()
     hours = fields.Float(compute='_hours_compute', readonly=True, store=True)
-    attendance_error = fields.Boolean()
+    attendance_error = fields.Boolean(compute='_error_check')
 
     @api.one
     @api.depends('entry_date', 'exit_date')
@@ -26,3 +27,28 @@ class TimeControl(models.Model):
             self.hours = (exit_date - entry_date).seconds / 3600.0
         else:
             self.hours = 0
+
+    @api.depends('entry_date', 'exit_date')
+    def _error_check(self):
+        self.attendance_error = not (self.entry_date and self.exit_date)
+
+    @api.one
+    @api.onchange('entry_date')
+    def _attendance_date_check(self):
+        if not self.attendance_date:
+            self.attendance_date = self.entry_date
+
+    @api.model
+    def create(self, values):
+        if values['exit_date'] and values['entry_date']:
+            if values['exit_date'] < values['entry_date']:
+                raise except_orm(_("Error!"), _("Exit date is earlier than entry date"))
+        return super(TimeControl, self).create(values)
+
+    @api.multi
+    def write(self, vals):
+        exit = vals.get('exit_date', self.exit_date)
+        entry = vals.get('entry_date', self.entry_date)
+        if exit and entry and exit < entry:
+            raise except_orm(_("Error!"), _("Exit date is earlier than entry date"))
+        return super(TimeControl, self).write(vals)

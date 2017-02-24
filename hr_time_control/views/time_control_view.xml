@@ -39,6 +39,10 @@
                                 <field name="hours" widget="float_time"/>
                             </group>
                         </group>
+                        <div>
+                            <label for="attendance_error"/>
+                            <field name="attendance_error" readonly="1"/>
+                        </div>
                     </sheet>
                 </form>
             </field>
