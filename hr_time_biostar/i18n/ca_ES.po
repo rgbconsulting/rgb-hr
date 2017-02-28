@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-22 10:04+0000\n"
-"PO-Revision-Date: 2017-02-22 10:04+0000\n"
+"POT-Creation-Date: 2017-02-28 10:27+0000\n"
+"PO-Revision-Date: 2017-02-28 10:27+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -32,6 +32,11 @@ msgid "Address"
 msgstr "Adreça"
 
 #. module: hr_time_biostar
+#: field:hr.biostar.terminal,auto_get:0
+msgid "Auto get logs"
+msgstr "Obtenir automàticament els logs"
+
+#. module: hr_time_biostar
 #: view:hr.time.biostar.wizard:hr_time_biostar.hr_time_biostar_wizard_view
 #: model:ir.ui.menu,name:hr_time_biostar.time_logs_wizard_menu
 msgid "Biostar Terminal Logs"
@@ -43,16 +48,16 @@ msgid "Biostar Terminals"
 msgstr "Terminals Biostar"
 
 #. module: hr_time_biostar
+#: code:addons/hr_time_biostar/models/biostar_terminal.py:41
+#: code:addons/hr_time_biostar/models/biostar_terminal.py:59
+#, python-format
+msgid "Biostar device error"
+msgstr "Biostar device error"
+
+#. module: hr_time_biostar
 #: model:ir.actions.act_window,name:hr_time_biostar.hr_time_biostar_action
 msgid "Biostar terminals"
 msgstr "Terminals Biostar"
-
-#. module: hr_time_biostar
-#: code:addons/hr_time_biostar/wizard/biostar_terminal_wizard.py:47
-#: code:addons/hr_time_biostar/wizard/biostar_terminal_wizard.py:65
-#, python-format
-msgid "Biostar device error"
-msgstr "Error al dispositiu Biostar"
 
 #. module: hr_time_biostar
 #: view:hr.time.biostar.wizard:hr_time_biostar.hr_time_biostar_wizard_view
@@ -149,7 +154,7 @@ msgid "Process imported logs"
 msgstr "Processar els registres importats"
 
 #. module: hr_time_biostar
-#: code:addons/hr_time_biostar/wizard/biostar_terminal_wizard.py:37
+#: code:addons/hr_time_biostar/wizard/biostar_terminal_wizard.py:36
 #, python-format
 msgid "Select one terminal."
 msgstr "Seleccioni un terminal."

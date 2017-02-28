@@ -24,6 +24,7 @@
                             <group>
                                 <field name="name"/>
                                 <field name="code"/>
+                                <field name="auto_get"/>
                             </group>
                             <group>
                                 <field name="address"/>

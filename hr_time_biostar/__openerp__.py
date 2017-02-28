@@ -40,6 +40,7 @@ This module extends hr_time_control to support biostart devices.
         'security/ir.model.access.csv',
         'data/config.xml',
         'data/actions.xml',
+        'data/biostar_cron.xml',
     ],
 
     'demo': [
