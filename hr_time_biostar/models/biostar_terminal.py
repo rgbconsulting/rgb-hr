@@ -63,4 +63,4 @@ class BiostarTerminal(models.Model):
         terminals = self.search([('auto_get', '=', True)])
         if terminals:
             for t in terminals:
-                t.action_get_logs(True,True)
+                t.action_get_logs(process_logs=True, clear_logs=True)
