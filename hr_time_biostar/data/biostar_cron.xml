@@ -8,6 +8,7 @@
             <field name="interval_type">days</field>
             <field name="numbercall">-1</field>
             <field eval="False" name="doall"/>
+            <field eval="False" name="active"/>
             <field eval="'hr.biostar.terminal'" name="model"/>
             <field eval="'cron_action'" name="function"/>
         </record>
