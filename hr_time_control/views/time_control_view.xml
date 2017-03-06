@@ -82,7 +82,7 @@
         </record>
 
         <!-- Menus -->
-        <menuitem sequence="10" id="hr_time_label" parent="hr.menu_hr_root" name="Attendance"/>
+        <menuitem sequence="10" id="hr_time_label" parent="hr.menu_hr_root" name="Time control"/>
         <menuitem sequence="10" id="hr_time_control_menu" parent="hr_time_label" name="Attendances"
                   action="hr_time_control_action"/>
 

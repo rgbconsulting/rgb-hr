@@ -48,7 +48,7 @@
         </record>
 
         <!-- Menus -->
-        <menuitem sequence="40" id="hr_time_config_label" parent="hr.menu_hr_configuration" name="Attendance"
+        <menuitem sequence="40" id="hr_time_config_label" parent="hr.menu_hr_configuration" name="Time control"
                   groups="group_time_control_manager"/>
         <menuitem sequence="5" id="hr_time_action_config_menu" parent="hr_time_config_label" name="Actions"
                   action="hr_time_action_action"/>

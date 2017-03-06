@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-23 16:43+0000\n"
-"PO-Revision-Date: 2017-02-23 16:43+0000\n"
+"POT-Creation-Date: 2017-03-06 13:01+0000\n"
+"PO-Revision-Date: 2017-03-06 13:01+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -81,8 +81,6 @@ msgstr "Todos los registros seleccionados deben estar sin procesar para realizar
 
 #. module: hr_time_control
 #: model:ir.module.category,name:hr_time_control.time_control_security_category
-#: model:ir.ui.menu,name:hr_time_control.hr_time_config_label
-#: model:ir.ui.menu,name:hr_time_control.hr_time_label
 msgid "Attendance"
 msgstr "Asistencia"
 
@@ -253,6 +251,13 @@ msgid "Error"
 msgstr "Error"
 
 #. module: hr_time_control
+#: code:addons/hr_time_control/models/time_control.py:45
+#: code:addons/hr_time_control/models/time_control.py:53
+#, python-format
+msgid "Error!"
+msgstr "Error!"
+
+#. module: hr_time_control
 #: view:website:hr_time_control.attendance_template
 msgid "Exit Date"
 msgstr "Fecha de salida"
@@ -261,6 +266,13 @@ msgstr "Fecha de salida"
 #: field:hr.time.control,exit_date:0
 msgid "Exit date"
 msgstr "Fecha de salida"
+
+#. module: hr_time_control
+#: code:addons/hr_time_control/models/time_control.py:45
+#: code:addons/hr_time_control/models/time_control.py:53
+#, python-format
+msgid "Exit date is earlier than entry date"
+msgstr "Exit date is earlier than entry date"
 
 #. module: hr_time_control
 #: field:hr.employee,external_code:0
@@ -359,7 +371,7 @@ msgstr "Opciones del informe"
 #: view:hr.time.control:hr_time_control.view_hr_time_control_filter
 #: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
 msgid "Search Time Control"
-msgstr "Search Time Control"
+msgstr "Buscar Control horario"
 
 #. module: hr_time_control
 #: selection:hr.time.action,action_type:0
@@ -375,6 +387,12 @@ msgstr "Salida"
 #: view:website:hr_time_control.attendance_template
 msgid "Theoretical hours"
 msgstr "Horas teóricas"
+
+#. module: hr_time_control
+#: model:ir.ui.menu,name:hr_time_control.hr_time_config_label
+#: model:ir.ui.menu,name:hr_time_control.hr_time_label
+msgid "Time control"
+msgstr "Control horario"
 
 #. module: hr_time_control
 #: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
