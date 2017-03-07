@@ -28,6 +28,7 @@ class TimeControl(models.Model):
         else:
             self.hours = 0
 
+    @api.one
     @api.depends('entry_date', 'exit_date')
     def _error_check(self):
         self.attendance_error = not (self.entry_date and self.exit_date)
@@ -38,17 +39,8 @@ class TimeControl(models.Model):
         if not self.attendance_date:
             self.attendance_date = self.entry_date
 
-    @api.model
-    def create(self, values):
-        if values['exit_date'] and values['entry_date']:
-            if values['exit_date'] < values['entry_date']:
-                raise except_orm(_("Error!"), _("Exit date is earlier than entry date"))
-        return super(TimeControl, self).create(values)
-
-    @api.multi
-    def write(self, vals):
-        exit = vals.get('exit_date', self.exit_date)
-        entry = vals.get('entry_date', self.entry_date)
-        if exit and entry and exit < entry:
-            raise except_orm(_("Error!"), _("Exit date is earlier than entry date"))
-        return super(TimeControl, self).write(vals)
+    @api.one
+    @api.constrains('entry_date', 'exit_date')
+    def _check_date_validity(self):
+        if self.exit_date and self.entry_date and self.exit_date < self.entry_date:
+            raise except_orm(_("Error with dates!"), _("Exit date is earlier than entry date"))

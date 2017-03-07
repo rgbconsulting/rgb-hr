@@ -7,10 +7,10 @@
             <field name="interval_number">1</field>
             <field name="interval_type">days</field>
             <field name="numbercall">-1</field>
-            <field eval="False" name="doall"/>
-            <field eval="'hr.biostar.terminal'" name="model"/>
-            <field eval="'cron_action'" name="function"/>
-            <field eval="False" name="active"/>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'hr.biostar.terminal'"/>
+            <field name="function" eval="'cron_action'"/>
+            <field name="active" eval="False"/>
         </record>
     </data>
 </openerp>
