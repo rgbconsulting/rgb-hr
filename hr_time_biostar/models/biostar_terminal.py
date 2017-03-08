@@ -21,10 +21,11 @@ class BiostarTerminal(models.Model):
     auto_get = fields.Boolean(string="Auto get logs")
 
     def _convert_timestamp(self, timestamp, tz):
-        tz = timezone(tz or 'utc')
+        tz = pytz.timezone(tz or 'utc')
         date = datetime.fromtimestamp(timestamp, tz)
         utc_date = date.astimezone(pytz.UTC)
-        return utc_date.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
+        db_date = utc_date - date.utcoffset()
+        return db_date.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
 
     @api.one
     def action_get_logs(self, process_logs, clear_logs):
@@ -36,7 +37,7 @@ class BiostarTerminal(models.Model):
         filename = '/tmp/' + datetime.now().strftime(DEFAULT_SERVER_DATETIME_FORMAT) + ".csv"
         # Execute getlog command
         try:
-            cmd_out = check_output([bs_command, 'getlog', address, port, filename])
+            cmd_out = check_output(['python', bs_command, 'getlog', address, port, filename])
         except BaseException as e:
             raise Warning(_('Biostar device error') + " : " + str(e))
         # Import device logs
