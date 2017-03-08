@@ -37,7 +37,7 @@ class BiostarTerminal(models.Model):
         filename = '/tmp/' + datetime.now().strftime(DEFAULT_SERVER_DATETIME_FORMAT) + ".csv"
         # Execute getlog command
         try:
-            cmd_out = check_output(['python', bs_command, 'getlog', address, port, filename])
+            cmd_out = check_output([bs_command, 'getlog', address, port, filename])
         except BaseException as e:
             raise Warning(_('Biostar device error') + " : " + str(e))
         # Import device logs
