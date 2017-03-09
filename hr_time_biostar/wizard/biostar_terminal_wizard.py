@@ -24,14 +24,8 @@ class BiostarTerminalWizard(models.TransientModel):
                                 default=lambda self: int(self.env['ir.config_parameter'].get_param(
                                     'hr_time_biostar.clear_logs', default=0)))
 
-    def _convert_timestamp(self, timestamp, tz):
-        tz = timezone(tz or 'utc')
-        date = datetime.fromtimestamp(timestamp, tz)
-        utc_date = date.astimezone(pytz.UTC)
-        return utc_date.strftime(DEFAULT_SERVER_DATETIME_FORMAT)
-
     @api.multi
     def action_get_logs(self):
         if not self.terminal_id:
             raise Warning(_('Select one terminal.'))
-        self.terminal_id.action_get_logs(self.process_logs,self.clear_logs)
+        self.terminal_id.action_get_logs(self.process_logs, self.clear_logs)

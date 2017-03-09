@@ -48,12 +48,12 @@
             <field name="model">hr.time.logs</field>
             <field name="arch" type="xml">
                 <search string="Search Time Control">
-                    <field name="employee_id"/>
+                    <field name="employee_code"/>
                     <field name="action_code"/>
                     <field name="date"/>
                     <filter string="To process" name="to_process" domain="[('processed','=',False)]"/>
                     <filter string="Processed" name="processed" domain="[('processed','=',True)]"/>
-                    <filter string="With Error" name="error" domain="[('attendance_error','=',True)]"/>
+                    <filter string="With Error" name="error" domain="[('error','=',True)]"/>
                     <filter name="today" string="Today " separator="1"
                             domain="[('date','=', (datetime.datetime.today()).strftime('%Y-%m-%d'))]"
                             help="Today"/>

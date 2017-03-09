@@ -19,6 +19,12 @@ class TimeLogs(models.Model):
     action_code = fields.Char(string="Action code")
     processed = fields.Boolean()
     error = fields.Boolean()
+    name = fields.Char(compute='_compute_line_name',readonly=True)
+
+    @api.one
+    @api.depends('employee_code', 'date')
+    def _compute_line_name(self):
+        self.name = self.date +' - '+ self.employee_code or ''
 
     def _process_signin(self):
         employee_id = self.employee_id.id

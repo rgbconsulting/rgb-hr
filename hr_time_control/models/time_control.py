@@ -16,7 +16,8 @@ class TimeControl(models.Model):
     entry_date = fields.Datetime()
     exit_date = fields.Datetime()
     hours = fields.Float(compute='_hours_compute', readonly=True, store=True)
-    attendance_error = fields.Boolean(compute='_error_check')
+    attendance_error = fields.Boolean(compute='_error_check', store=True)
+    name = fields.Char(compute='_compute_line_name',readonly=True)
 
     @api.one
     @api.depends('entry_date', 'exit_date')
@@ -27,6 +28,11 @@ class TimeControl(models.Model):
             self.hours = (exit_date - entry_date).seconds / 3600.0
         else:
             self.hours = 0
+
+    @api.one
+    @api.depends('employee_id', 'employee_id.name', 'attendance_date')
+    def _compute_line_name(self):
+        self.name = self.employee_id.name+' - '+self.attendance_date
 
     @api.one
     @api.depends('entry_date', 'exit_date')
