@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-06 13:01+0000\n"
-"PO-Revision-Date: 2017-03-06 13:01+0000\n"
+"POT-Creation-Date: 2017-03-10 10:30+0000\n"
+"PO-Revision-Date: 2017-03-10 10:30+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -65,7 +65,7 @@ msgid "Actions"
 msgstr ""
 
 #. module: hr_time_control
-#: code:addons/hr_time_control/models/time_logs.py:64
+#: code:addons/hr_time_control/models/time_logs.py:70
 #, python-format
 msgid "All the selected logs must be unprocessed to perform this action"
 msgstr ""
@@ -137,7 +137,6 @@ msgid "Current Month"
 msgstr ""
 
 #. module: hr_time_control
-#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
 #: field:hr.time.logs,date:0
 msgid "Date"
 msgstr ""
@@ -153,8 +152,18 @@ msgid "Date To:"
 msgstr ""
 
 #. module: hr_time_control
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "Date day"
+msgstr ""
+
+#. module: hr_time_control
 #: field:hr.time.control.wizard,date_from:0
 msgid "Date from"
+msgstr ""
+
+#. module: hr_time_control
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "Date month"
 msgstr ""
 
 #. module: hr_time_control
@@ -242,10 +251,9 @@ msgid "Error"
 msgstr ""
 
 #. module: hr_time_control
-#: code:addons/hr_time_control/models/time_control.py:45
-#: code:addons/hr_time_control/models/time_control.py:53
+#: code:addons/hr_time_control/models/time_control.py:52
 #, python-format
-msgid "Error!"
+msgid "Error with dates!"
 msgstr ""
 
 #. module: hr_time_control
@@ -259,8 +267,7 @@ msgid "Exit date"
 msgstr ""
 
 #. module: hr_time_control
-#: code:addons/hr_time_control/models/time_control.py:45
-#: code:addons/hr_time_control/models/time_control.py:53
+#: code:addons/hr_time_control/models/time_control.py:52
 #, python-format
 msgid "Exit date is earlier than entry date"
 msgstr ""
@@ -329,6 +336,8 @@ msgstr ""
 
 #. module: hr_time_control
 #: field:hr.time.action,name:0
+#: field:hr.time.control,name:0
+#: field:hr.time.logs,name:0
 msgid "Name"
 msgstr ""
 

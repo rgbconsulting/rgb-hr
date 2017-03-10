@@ -60,8 +60,8 @@ class BiostarTerminal(models.Model):
                 raise Warning(_('Biostar device error') + " : " + str(e))
 
     @api.model
-    def cron_action(self):
+    def cron_action(self, process_logs=True, clear_logs=True):
         terminals = self.search([('auto_get', '=', True)])
         if terminals:
             for t in terminals:
-                t.action_get_logs(process_logs=True, clear_logs=True)
+                t.action_get_logs(process_logs, clear_logs)

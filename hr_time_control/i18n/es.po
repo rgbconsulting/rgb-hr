@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-06 13:01+0000\n"
-"PO-Revision-Date: 2017-03-06 13:01+0000\n"
+"POT-Creation-Date: 2017-03-10 10:30+0000\n"
+"PO-Revision-Date: 2017-03-10 10:30+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -74,7 +74,7 @@ msgid "Actions"
 msgstr "Acciones"
 
 #. module: hr_time_control
-#: code:addons/hr_time_control/models/time_logs.py:64
+#: code:addons/hr_time_control/models/time_logs.py:70
 #, python-format
 msgid "All the selected logs must be unprocessed to perform this action"
 msgstr "Todos los registros seleccionados deben estar sin procesar para realizar esta acción"
@@ -143,10 +143,9 @@ msgstr "Creado en"
 #: view:hr.time.control:hr_time_control.view_hr_time_control_filter
 #: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
 msgid "Current Month"
-msgstr "Current Month"
+msgstr "Mes actual"
 
 #. module: hr_time_control
-#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
 #: field:hr.time.logs,date:0
 msgid "Date"
 msgstr "Fecha"
@@ -162,9 +161,19 @@ msgid "Date To:"
 msgstr "Fecha salida:"
 
 #. module: hr_time_control
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "Date day"
+msgstr "Date day"
+
+#. module: hr_time_control
 #: field:hr.time.control.wizard,date_from:0
 msgid "Date from"
 msgstr "Desde"
+
+#. module: hr_time_control
+#: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
+msgid "Date month"
+msgstr "Date month"
 
 #. module: hr_time_control
 #: field:hr.time.control.wizard,date_to:0
@@ -251,11 +260,10 @@ msgid "Error"
 msgstr "Error"
 
 #. module: hr_time_control
-#: code:addons/hr_time_control/models/time_control.py:45
-#: code:addons/hr_time_control/models/time_control.py:53
+#: code:addons/hr_time_control/models/time_control.py:52
 #, python-format
-msgid "Error!"
-msgstr "Error!"
+msgid "Error with dates!"
+msgstr "Error con las fechas!"
 
 #. module: hr_time_control
 #: view:website:hr_time_control.attendance_template
@@ -268,11 +276,10 @@ msgid "Exit date"
 msgstr "Fecha de salida"
 
 #. module: hr_time_control
-#: code:addons/hr_time_control/models/time_control.py:45
-#: code:addons/hr_time_control/models/time_control.py:53
+#: code:addons/hr_time_control/models/time_control.py:52
 #, python-format
 msgid "Exit date is earlier than entry date"
-msgstr "Exit date is earlier than entry date"
+msgstr "La fecha de salida es de antes que el de la entrada"
 
 #. module: hr_time_control
 #: field:hr.employee,external_code:0
@@ -338,6 +345,8 @@ msgstr "Mes"
 
 #. module: hr_time_control
 #: field:hr.time.action,name:0
+#: field:hr.time.control,name:0
+#: field:hr.time.logs,name:0
 msgid "Name"
 msgstr "Nombre"
 
@@ -392,7 +401,7 @@ msgstr "Horas teóricas"
 #: model:ir.ui.menu,name:hr_time_control.hr_time_config_label
 #: model:ir.ui.menu,name:hr_time_control.hr_time_label
 msgid "Time control"
-msgstr "Control horario"
+msgstr "Control de tiempo"
 
 #. module: hr_time_control
 #: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter

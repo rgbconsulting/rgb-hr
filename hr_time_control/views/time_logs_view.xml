@@ -55,14 +55,15 @@
                     <filter string="Processed" name="processed" domain="[('processed','=',True)]"/>
                     <filter string="With Error" name="error" domain="[('error','=',True)]"/>
                     <filter name="today" string="Today " separator="1"
-                            domain="[('date', '&gt;=', datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')),('date', '&lt;=', datetime.datetime.now().strftime('%Y-%m-%d 23:23:59'))]"
+                            domain="[('date', '&gt;=', datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')),('date', '&lt;=', datetime.datetime.now().strftime('%Y-%m-%d 23:59:59'))]"
                             help="Today"/>
                     <filter string="Month" name="month"
                             domain="[('date', '&gt;=', (context_today().strftime('%Y-%m-1')))]"
                             help="Current Month"/>
                     <group expand="0" string="Group By">
                         <filter string="Employee" domain="" context="{'group_by':'employee_id'}"/>
-                        <filter string="Date" domain="" context="{'group_by':'date:day'}"/>
+                        <filter string="Date day" domain="" context="{'group_by':'date:day'}"/>
+                        <filter string="Date month" domain="" context="{'group_by':'date:month'}"/>
                     </group>
                 </search>
             </field>
