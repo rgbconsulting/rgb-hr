@@ -60,7 +60,7 @@
                             domain="[('attendance_date','=', (datetime.datetime.today()).strftime('%Y-%m-%d'))]"
                             help="Today"/>
                     <filter string="Month" name="month"
-                            domain="[('attendance_date','&gt;=',(context_today()-relativedelta(years=1)).strftime('%%Y-%%m-01')),('attendance_date','&lt;',time.strftime('%%Y-%%m-01'))]"
+                            domain="[('attendance_date', '&gt;=', (context_today().strftime('%Y-%m-1')))]"
                             help="Current Month"/>
                     <filter string="Error" name="error" domain="[('attendance_error','=',True)]"/>
                 </search>
