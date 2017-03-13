@@ -11,6 +11,7 @@
             <field name="model" eval="'hr.biostar.terminal'"/>
             <field name="function" eval="'cron_action'"/>
             <field name="active" eval="False"/>
+            <field name="args">(False, False)</field>
         </record>
     </data>
 </openerp>
