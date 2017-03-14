@@ -163,7 +163,7 @@ msgstr "Fecha salida:"
 #. module: hr_time_control
 #: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
 msgid "Date day"
-msgstr "Date day"
+msgstr "Fecha día"
 
 #. module: hr_time_control
 #: field:hr.time.control.wizard,date_from:0
@@ -173,7 +173,7 @@ msgstr "Desde"
 #. module: hr_time_control
 #: view:hr.time.logs:hr_time_control.view_hr_time_logs_filter
 msgid "Date month"
-msgstr "Date month"
+msgstr "Fecha mes"
 
 #. module: hr_time_control
 #: field:hr.time.control.wizard,date_to:0
