@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_account_move_cancel
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-03-28 11:45+0000\n"
+"PO-Revision-Date: 2017-03-28 11:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_account_move_cancel
+#: view:hr.expense.expense:hr_account_move_cancel.view_expenses_form_cancel
+msgid "\"confirm,cancelled,done,paid\""
+msgstr "\"confirm,cancelled,done,paid\""
+
+#. module: hr_account_move_cancel
+#: code:addons/hr_account_move_cancel/models/hr_expense.py:14
+#, python-format
+msgid "Account move must be previously deleted in order to be able to cancel the expense."
+msgstr "Han d'estar els assentaments comptables de la despesa per a poder cancel·lar-lo."
+
+#. module: hr_account_move_cancel
+#: model:ir.model,name:hr_account_move_cancel.model_hr_expense_expense
+msgid "Expense"
+msgstr "Despesa"
+
