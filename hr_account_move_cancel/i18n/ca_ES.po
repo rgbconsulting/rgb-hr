@@ -24,7 +24,7 @@ msgstr "\"confirm,cancelled,done,paid\""
 #: code:addons/hr_account_move_cancel/models/hr_expense.py:14
 #, python-format
 msgid "Account move must be previously deleted in order to be able to cancel the expense."
-msgstr "Han d'estar els assentaments comptables de la despesa per a poder cancel·lar-lo."
+msgstr "Han d'estar eliminats els assentaments comptables de la despesa per a poder cancel·lar-lo."
 
 #. module: hr_account_move_cancel
 #: model:ir.model,name:hr_account_move_cancel.model_hr_expense_expense
