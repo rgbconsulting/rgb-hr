@@ -33,7 +33,7 @@
 HR Expense Reset
 ================
 
-This module allows to move expense to draft if it don't have any accoutn move.
+This module allows to move expense to draft if it don't have any account move.
     """,
 
     'data': [

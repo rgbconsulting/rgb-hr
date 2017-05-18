@@ -4,7 +4,7 @@ HR Expense Reset
 Features
 --------
 
-This module allows to move expense to draft if it don't have any accoutn move.
+This module allows to move expense to draft if it don't have any account move.
 
 Credits
 =======
