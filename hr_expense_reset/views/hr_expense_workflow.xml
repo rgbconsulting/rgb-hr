@@ -2,7 +2,7 @@
 <openerp>
     <data>
 
-        <record id="hr_expense_transition" model="workflow.transition">
+        <record id="hr_expense_reset_transition" model="workflow.transition">
             <field name="act_from" ref="hr_expense.act_done"/>
             <field name="act_to" ref="hr_expense.act_draft"/>
             <field name="signal">draft</field>

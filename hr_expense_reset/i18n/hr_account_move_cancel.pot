@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* hr_account_move_cancel
+#	* hr_expense_reset
 #
 msgid ""
 msgstr ""
@@ -15,19 +15,19 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: hr_account_move_cancel
-#: view:hr.expense.expense:hr_account_move_cancel.view_expenses_form_cancel
+#. module: hr_expense_reset
+#: view:hr.expense.expense:hr_expense_reset.view_expenses_form_cancel
 msgid "\"confirm,cancelled,done,paid\""
 msgstr ""
 
-#. module: hr_account_move_cancel
-#: code:addons/hr_account_move_cancel/models/hr_expense.py:14
+#. module: hr_expense_reset
+#: code:addons/hr_expense_reset/models/hr_expense.py:14
 #, python-format
 msgid "Account move must be previously deleted in order to be able to cancel the expense."
 msgstr ""
 
-#. module: hr_account_move_cancel
-#: model:ir.model,name:hr_account_move_cancel.model_hr_expense_expense
+#. module: hr_expense_reset
+#: model:ir.model,name:hr_expense_reset.model_hr_expense_expense
 msgid "Expense"
 msgstr ""
 

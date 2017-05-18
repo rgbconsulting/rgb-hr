@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#   HR Account Move Cancel
+#   HR Expense Reset
 #   Copyright 2017 RGB Consulting, SL
 #
 #   This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 #
 ##############################################################################
 {
-    'name': "HR Account Move Cancel",
+    'name': "HR Expense Reset",
     'version': '1.0',
     'depends': ['hr_expense'],
     'license': 'AGPL-3',
@@ -27,13 +27,13 @@
     'website': "http://www.rgbconsulting.com",
     'category': 'HR',
 
-    'summary': """Account Move Cancel""",
+    'summary': """HR Expense Reset""",
 
     'description': """
-HR Account Move Cancel
-======================
+HR Expense Reset
+================
 
-This module allows to move entry from waiting paiment and paid to draft.
+This module allows to move expense to draft if it don't have any accoutn move.
     """,
 
     'data': [

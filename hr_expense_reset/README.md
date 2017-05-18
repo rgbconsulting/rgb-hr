@@ -1,13 +1,10 @@
-HR Account Move Cancel
-======================
-
-Account Move Cancel.
+HR Expense Reset
+================
 
 Features
 --------
 
-This module allows to move entry from waiting payment and paid to draft.
-
+This module allows to move expense to draft if it don't have any accoutn move.
 
 Credits
 =======

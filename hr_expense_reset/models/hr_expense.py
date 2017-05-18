@@ -5,7 +5,7 @@ from openerp import models, api, _
 from openerp.exceptions import Warning
 
 
-class AccountInvoice(models.Model):
+class HrExpenseExpense(models.Model):
     _inherit = 'hr.expense.expense'
 
     @api.multi
