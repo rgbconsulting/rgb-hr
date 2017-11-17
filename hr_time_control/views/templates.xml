@@ -14,11 +14,11 @@
                                 </div>
                                 <div class="col-xs-3">
                                     <strong>Date From:</strong>
-                                    <p t-esc="date_from" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                    <p t-esc="datetime.datetime.strptime(date_from, '%Y-%m-%d').strftime('%d/%m/%Y')"/>
                                 </div>
                                 <div class="col-xs-3">
                                     <strong>Date To:</strong>
-                                    <p t-esc="date_to" t-field-options='{"format": "dd/MM/yyyy"}'/>
+                                    <p t-esc="datetime.datetime.strptime(date_to, '%Y-%m-%d').strftime('%d/%m/%Y')"/>
                                 </div>
                             </div>
                             <table class="table table-condensed">
@@ -40,13 +40,17 @@
                                     <t t-foreach="rec['attendances']" t-as="atd">
                                         <tr>
                                             <td class="text-left">
-                                                <span t-esc="atd.attendance_date"/>
+                                                <span t-esc="datetime.datetime.strptime(atd.attendance_date, '%Y-%m-%d').strftime('%d/%m/%Y')"/>
                                             </td>
                                             <td class="text-center">
-                                                <span t-esc="atd.entry_date"/>
+                                                <t t-if="atd.entry_date">
+                                                    <span t-esc="context_timestamp(datetime.datetime.strptime(atd.entry_date, '%Y-%m-%d %H:%M:%S')).strftime('%d/%m/%Y %H:%M:%S')"/>
+                                                </t>
                                             </td>
                                             <td class="text-center">
-                                                <span t-esc="atd.exit_date"/>
+                                                <t t-if="atd.exit_date">
+                                                    <span t-esc="context_timestamp(datetime.datetime.strptime(atd.exit_date, '%Y-%m-%d %H:%M:%S')).strftime('%d/%m/%Y %H:%M:%S')"/>
+                                                </t>
                                             </td>
                                             <td class="text-right">
                                                 <t t-esc="'%02d:%02d' % (int(str(atd.hours).split('.')[0]), int(float(str('%.2f' % atd.hours).split('.')[1])/100*60))"/>
