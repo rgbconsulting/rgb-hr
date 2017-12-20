@@ -17,7 +17,8 @@ class HrEmployee(models.Model):
                     'name': name,
                     'login': name.replace(' ', '_').lower(),
                     'email': rec.work_email,
-                    'employee_ids': [(4, rec.id)]
+                    'employee_ids': [(4, rec.id)],
+                    'active': rec.active
                 })
                 # Remove default user groups
                 default_groups = ['base.group_user', 'base.group_partner_manager']

@@ -24,7 +24,7 @@
     'depends': ['hr'],
     'license': 'AGPL-3',
     'author': "RGB Consulting SL",
-    'website': "http://www.rgbconsulting.com",
+    'website': "https://www.rgbconsulting.com",
     'category': 'base',
     'summary': """Create user from employee""",
     'description': """
