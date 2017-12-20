@@ -1,0 +1,19 @@
+<openerp>
+    <data>
+        <!-- Create user action and binding -->
+        <record id="create_user_employee_action" model="ir.actions.server">
+            <field name="name">Create User</field>
+            <field name="model_id" ref="model_hr_employee"/>
+            <field name="state">code</field>
+            <field name="code">self.action_create_user(cr, user.id, context.get('active_ids', []), context=context)
+            </field>
+        </record>
+
+        <record id="create_user_employee_binding" model="ir.values">
+            <field name="name">Create User</field>
+            <field name="key2" eval="'client_action_multi'"/>
+            <field name="model" eval="'hr.employee'"/>
+            <field name="value" eval="'ir.actions.server,%d' % create_user_employee_action"/>
+        </record>
+    </data>
+</openerp>
